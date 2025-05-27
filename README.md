@@ -107,14 +107,6 @@ The final PDF report includes:
 
 ---
 
-## 📌 Notes
-
-- **Data Sources:** FBref and Transfermarkt (public football statistics)
-- **Privacy:** No personal or sensitive data is included
-- **License:** MIT License
-
----
-
 ## 🤝 Contributions
 
 Contributions are welcome! If you'd like to improve the project:
@@ -132,3 +124,18 @@ Contributions are welcome! If you'd like to improve the project:
 **Luis Rodríguez Rico**  
 📧 [luisrguezrico97@gmail.com](mailto:luisrguezrico97@gmail.com)  
 💼 [LinkedIn](https://www.linkedin.com/in/luis-rodr%C3%ADguez-rico-a9241b134/)
+
+---
+
+## 📌 Notes
+
+- **Data Sources:** FBref and Transfermarkt (public football statistics)
+- **Privacy:** No personal or sensitive data is included
+
+---
+
+## 📝 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+© 2023–2024 Luis Rodríguez Rico. All rights reserved.
