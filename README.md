@@ -12,7 +12,6 @@ A comprehensive tool was developed to detect similarities between football playe
 |-----------------|--------------------------------------------------------------|
 | `data/`         | Cleaned datasets in CSV format                               |
 | `scripts/`      | R and Python scripts for data extraction and transformation |
-| `dashboard/`    | Power BI dashboard file                                      |
 | `report/`       | Final report (PDF) explaining the full project               |
 | `README.md`     | Project documentation and overview                           |
 | `.gitignore`    | Specifies which files/folders Git should ignore              |
@@ -44,6 +43,10 @@ A comprehensive tool was developed to detect similarities between football playe
 ## 🖼️ Sample Output
 
 Examples of similarity comparisons, PCA visualizations, and player clusters are included in the final report and Power BI dashboard.
+
+### 📊 Interactive Dashboard
+
+[View the interactive dashboard on Power BI Online](https://app.powerbi.com/view?r=eyJrIjoiOWI3OTdlZjctYmQ0MC00MWNlLTkzM2YtMmE4MWNmZDhhZjI2IiwidCI6IjA1ZWE3NGEzLTkyYzUtNGMzMS05NzhhLTkyNWMzYzc5OWNkMCIsImMiOjh9)
 
 ## 📄 License
 
