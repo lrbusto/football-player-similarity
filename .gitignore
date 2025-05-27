@@ -9,17 +9,6 @@ __pycache__/
 .Rproj.user/
 .Ruserdata
 
-# Power BI
-*.pbix
-
-# Data files
-*.csv
-*.xlsx
-*.xls
-*.tsv
-*.json
-*.txt
-
 # Environment files
 .env
 .venv/
