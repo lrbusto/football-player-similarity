@@ -8,12 +8,14 @@ A comprehensive tool was developed to detect similarities between football playe
 
 ## 📂 Repository Structure
 
-├── data/         # Cleaned datasets (CSV)
-├── scripts/      # R and Python scripts for data handling
-├── dashboard/    # Power BI file (if available)
-├── report/       # Final report in PDF
-├── README.md     # Project documentation
-└── .gitignore    # Files and folders to be excluded
+| Folder/File     | Description                                                  |
+|-----------------|--------------------------------------------------------------|
+| `data/`         | Cleaned datasets in CSV format                               |
+| `scripts/`      | R and Python scripts for data extraction and transformation |
+| `dashboard/`    | Power BI dashboard file                                      |
+| `report/`       | Final report (PDF) explaining the full project               |
+| `README.md`     | Project documentation and overview                           |
+| `.gitignore`    | Specifies which files/folders Git should ignore              |
 
 ## ⚙️ Tools & Technologies
 
