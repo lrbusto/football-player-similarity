@@ -78,52 +78,52 @@ getPlayerStats <- function (type) {
 
 # Extraer estadísticas standard para las diferentes competiciones
 player_standard <- getPlayerStats(type = "standard")
-write.csv(player_standard, paste0(PFM_DIR,'Data/player_standard.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_standard, paste0(PFM_DIR,'data/raw/raw/player_standard.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de disparo para las diferentes competiciones
 player_shooting <- getPlayerStats(type = "shooting")
-write.csv(player_shooting, paste0(PFM_DIR,'Data/player_shooting.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_shooting, paste0(PFM_DIR,'data/raw/player_shooting.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de pase para las diferentes competiciones
 player_passing <- getPlayerStats(type = "passing")
-write.csv(player_passing, paste0(PFM_DIR,'Data/player_passing.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_passing, paste0(PFM_DIR,'data/raw/player_passing.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de tipos de pases para las diferentes competiciones
 player_pass_types <- getPlayerStats(type = "passing_types")
-write.csv(player_pass_types, paste0(PFM_DIR,'Data/player_pass_types.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_pass_types, paste0(PFM_DIR,'data/raw/player_pass_types.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de acciones ofensivas para las diferentes competiciones
 player_gca <- getPlayerStats(type = "gca")
-write.csv(player_gca, paste0(PFM_DIR,'Data/player_gca.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_gca, paste0(PFM_DIR,'data/raw/player_gca.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de defensa para las diferentes competiciones
 player_defense <- getPlayerStats(type = "defense")
-write.csv(player_defense, paste0(PFM_DIR,'Data/player_defense.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_defense, paste0(PFM_DIR,'data/raw/player_defense.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas de posesión para las diferentes competiciones
 player_possession <- getPlayerStats(type = "possession")
-write.csv(player_possession, paste0(PFM_DIR,'Data/player_possession.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_possession, paste0(PFM_DIR,'data/raw/player_possession.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas misceláneas para las diferentes competiciones
 player_misc <- getPlayerStats(type = "misc")
-write.csv(player_misc, paste0(PFM_DIR,'Data/player_misc.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_misc, paste0(PFM_DIR,'data/raw/player_misc.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # # Extraer estadísticas de porteros para las diferentes competiciones
 player_keepers <- getPlayerStats(type = "keeper")
-write.csv(player_keepers, paste0(PFM_DIR,'Data/player_keepers.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_keepers, paste0(PFM_DIR,'data/raw/player_keepers.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 # Extraer estadísticas avanzadas de porteros para las diferentes competiciones
 player_keepers_adv <- getPlayerStats(type = "keeper_adv")
-write.csv(player_keepers_adv, paste0(PFM_DIR,'Data/player_keepers_adv.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(player_keepers_adv, paste0(PFM_DIR,'data/raw/player_keepers_adv.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
 
 
 
@@ -153,9 +153,9 @@ for (url in c(
   
 }
 
-write.csv(market_values, paste0(PFM_DIR,'Data/full_market_values.csv'), row.names = FALSE)
+write.csv(market_values, paste0(PFM_DIR,'data/raw/full_market_values.csv'), row.names = FALSE)
 
 
 # Extraer el archivo de mapeo de FBref y Transfermark dado por worldfootballR
 fbref_tfmarkt_map <- player_dictionary_mapping()
-write.csv(fbref_tfmarkt_map, paste0(PFM_DIR,'Data/fbref_trmarkt_map.csv'), row.names = FALSE)
+write.csv(fbref_tfmarkt_map, paste0(PFM_DIR,'data/raw/fbref_trmarkt_map.csv'), row.names = FALSE)

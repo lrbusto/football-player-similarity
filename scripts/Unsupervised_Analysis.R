@@ -40,10 +40,10 @@ knitr::opts_knit$set(root.dir = PFM_DIR)
 # 2. Lectura de los ficheros por posiciones
 
 ## 2.1. Lectura de los ficheros por posiciones
-df_keepers <- read.csv("Results/Keepers_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
-df_defenders <- read.csv("Results/Defenders_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
-df_midfilders <- read.csv("Results/Midfilders_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
-df_attackers <- read.csv("Results/Attackers_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
+df_keepers <- read.csv("data/processed/Keepers_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
+df_defenders <- read.csv("data/processed/Defenders_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
+df_midfilders <- read.csv("data/processed/Midfilders_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
+df_attackers <- read.csv("data/processed/Attackers_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
 
 
 
@@ -602,7 +602,7 @@ eucl_sim_attackers
 
 # 6. Caso de Uso (Aplicación)
 
-df_general <- read.csv("Results/General_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
+df_general <- read.csv("data/processed/General_Dataset.csv", sep=",", encoding="UTF-8", check.names = F)
 df_squad <- df_general %>% select(UrlFBref, Squad)
 
 
@@ -712,7 +712,7 @@ final_attackers_df
 
 
 # Guardarlos en formato csv para leerlo en Power BI
-write.csv(final_keepers_df, paste0(PFM_DIR,'Results/Keepers_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
-write.csv(final_defenders_df, paste0(PFM_DIR,'Results/Defenders_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
-write.csv(final_midfilders_df, paste0(PFM_DIR,'Results/Midfilders_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
-write.csv(final_attackers_df, paste0(PFM_DIR,'Results/Attackers_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(final_keepers_df, paste0(PFM_DIR,'data/processed/Keepers_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(final_defenders_df, paste0(PFM_DIR,'data/processed/Defenders_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(final_midfilders_df, paste0(PFM_DIR,'data/processed/Midfilders_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)
+write.csv(final_attackers_df, paste0(PFM_DIR,'data/processed/Attackers_Final_Dataset.csv'), fileEncoding = 'UTF-8', row.names = FALSE)

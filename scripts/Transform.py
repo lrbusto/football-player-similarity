@@ -16,15 +16,15 @@ for s in ROOT_DIR:
 
 
 # Leer archivo excels sobre columnas a seleccionar o a calcular
-definitve_columns_df = pd.read_excel(f"{PFM_DIR}Documents/PFM Columns.xlsx", sheet_name="Definitive Ones")
-to_select_columns_df = pd.read_excel(f"{PFM_DIR}Documents/PFM Columns.xlsx", sheet_name="To Select")
-to_calculate_columns_df = pd.read_excel(f"{PFM_DIR}Documents/PFM Columns.xlsx", sheet_name="To Calculate")
-position_columns_df = pd.read_excel(f"{PFM_DIR}Documents/PFM Columns.xlsx", sheet_name="Position Columns")
+definitve_columns_df = pd.read_excel(f"{PFM_DIR}requirements/PFM Columns.xlsx", sheet_name="Definitive Ones")
+to_select_columns_df = pd.read_excel(f"{PFM_DIR}requirements/PFM Columns.xlsx", sheet_name="To Select")
+to_calculate_columns_df = pd.read_excel(f"{PFM_DIR}requirements/PFM Columns.xlsx", sheet_name="To Calculate")
+position_columns_df = pd.read_excel(f"{PFM_DIR}requirements/PFM Columns.xlsx", sheet_name="Position Columns")
 
 
 # Obtener una lista con los nombres de los archivos csv a leer
 files_list = list()
-with os.scandir(f'{PFM_DIR}Data/') as files:
+with os.scandir(f'{PFM_DIR}data/raw/') as files:
     for file in files:
         if 'market' in file.name or 'standard' in file.name or 'map' in file.name:
             pass
@@ -46,9 +46,9 @@ types_list = [
 def selectRenameData(file_name, type):
 
     try:
-        df = pd.read_csv(f"{PFM_DIR}Data/{file_name}")
+        df = pd.read_csv(f"{PFM_DIR}data/raw/{file_name}")
     except:
-        df = pd.read_csv(f"{PFM_DIR}Data/{file_name}", encoding='latin-1')
+        df = pd.read_csv(f"{PFM_DIR}data/raw/{file_name}", encoding='latin-1')
     
     if type == 'Mapping' or type == 'Transfermarkt':
         df = df[to_select_columns_df[to_select_columns_df['Type']==type]['worldfootballR'].unique().tolist()]
@@ -94,7 +94,7 @@ actual_df = actual_df.drop(['UrlTmarkt', 'UrlTmarkt_ID_x', 'UrlTmarkt_ID_y', 'Ur
 # Unir las estadísticas de los jugadores de FBref con el dataset original creado anteriormente, renombrando nombres de columnas
 for file_name, type in zip(files_list, types_list):
 
-    df_temp = pd.read_csv(f"{PFM_DIR}Data/{file_name}")
+    df_temp = pd.read_csv(f"{PFM_DIR}data/raw/{file_name}")
     df_temp = df_temp[to_select_columns_df[to_select_columns_df['Type'].isin(['General', type])]['worldfootballR'].unique().tolist()]
     df_temp.columns = to_select_columns_df[to_select_columns_df['Type'].isin(['General', type])]['PFM'].unique().tolist()
 
@@ -330,7 +330,7 @@ team_players = actual_df['Squad'].value_counts().reset_index()
 
 
 # Guardar el df principal en la carpeta Results
-actual_df.to_csv(f'{PFM_DIR}Results/PFM_Dataset.csv', index=False)
+actual_df.to_csv(f'{PFM_DIR}data/processed/PFM_Dataset.csv', index=False)
 
 
 # Crear dataframes principales por columnas de información general y tipo de posición
@@ -344,7 +344,7 @@ def datasetType(df=actual_df, type=list(), pos=list(), name=str()):
     else:
         filtered_df = df[df['Pos'].isin(pos)][cols_list]
 
-    filtered_df.to_csv(f'{PFM_DIR}Results/{name}_Dataset.csv', index=False)
+    filtered_df.to_csv(f'{PFM_DIR}data/processed/{name}_Dataset.csv', index=False)
 
     return filtered_df
 
