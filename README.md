@@ -23,6 +23,7 @@ This project applies data analytics and unsupervised machine learning techniques
 | `scripts/`        | R and Python scripts for data processing         |
 | `dashboard/`      | Power BI dashboard file (`.pbix`)                |
 | `report/`         | Final report in PDF format                       |
+| `requirements/`   | Auxiliary Excel file used during the dataset construction |
 | `README.md`       | Project documentation                            |
 | `.gitignore`      | Git exclusion rules                              |
 
