@@ -76,7 +76,7 @@ The final PDF report includes:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/lrbusto/football-player-similarity.git
+   git clone https://github.com/luisrrico/football-player-similarity.git
    cd football-player-similarity
    ```
 
